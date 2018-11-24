@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+:root {
+    --primary: #1a237e;
+    --p-light: #534bae;
+    --p-dark: #000051;
+
+    --secondary: #69efad;
+    --s-light: #9fffdf;
+    --s-dark: #2bbc7d;
+
+    --l-gray: #f5f5f6;
+    --d-gray: #E1E2E1;
+
+    --l-black: #323232;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    color: var(--l-black);
+    font-size: 18px;
+    background: var(--l-gray);
+    font-family: "Montserrat", sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+
+body::before {
+    top: 0;
+}
+
+body::after {
+    bottom: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+
+h2 {
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+
+
+
+a, a:active, a:visited{
+    color: var(--p-light);
+    transition: all .08s linear;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
+    background-position-y: 0em;
+    text-decoration: underline;
+}
+
+#main {
+    margin-right: auto;
+    margin-left: auto;
+    top: 0;
+    padding: 0 2em;
+    min-height: 100%;
+    margin-bottom: -30px;
+}
+
+#logo{
+    display: block;
+    width: 80%;
+    max-width: 20em;
+    margin: 4em 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#all-shows{
+    width: 100%;
+    display: table;
+    border: none;
+}
+
+
+.show{
+    display: table-row;
+    background: var(--p-light);
+    color: white;
+    font-size: 1.3em;
+    min-height: 3em;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.show:hover{
+    background: var(--primary);
+}
+
+.show-date{
+    display: table-cell;
+    width: 6em;
+    padding-left: .5em;
+}
+
+.date-mob{
+    font-weight: bold;
+}
+
+.show-name{
+    display: table-cell;
+    padding: 2em 0;
+}
+
+.show-venue{
+    opacity: .6;
+}
+
+.show-button-container{
+    width: 6em;
+    display: table-cell;
+    text-align: center;
+    padding-right: .5em;
+    vertical-align: middle;
+
+}
+
+.show-button{
+    background: var(--secondary);
+    color: black;
+    padding: .5em .5em;
+    font-size: .8em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.show-button:hover{
+    background: var(--s-light);
+    color: black;
+}
+
+
+footer, .push{
+    height: 30px;
+}
+
+footer {
+    padding: 2em;
+    text-align: center;
+    line-height: 1.3em;
+    
+}
+
+
+/* Loader animation from https://loading.io/css/ ----------- */
+
+.schedule-msg{
+    text-align: center;
+    background: var(--d-gray);
+    padding: 2em;
+    line-height: 1.8em;
+}
+
+
+.lds-ripple {
+  display: block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid var(--l-black);
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 28px;
+    left: 28px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: -1px;
+    left: -1px;
+    width: 58px;
+    height: 58px;
+    opacity: 0;
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (max-device-width: 760px) {
+    body {
+        font-size: 16px;
+    }
+
+    #main {
+        margin-top: 0;
+        padding: .5em;
+    }
+
+    #logo{
+        margin-top: 1.5em;
+        margin-bottom: 3em;
+    }
+
+    #upcoming-shows > h2{
+        text-align: center;
+    }
+
+    .show-name{
+        padding: 1em .3em;
+    }
+
+
+    .desktop-only{
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width: 761px) {
+    .mobile-only{
+        display: none;
+    }
+}

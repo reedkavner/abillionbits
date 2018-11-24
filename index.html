@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<!--
+
+    　  🤠
+　 　 💻💻💻
+　 💻　 💻　 💻
+🔍　 💻　 💻　 🔎
+　 　 💻　 💻
+　 　 💻　 💻
+　 　 👢　 👢
+howdy. i'm the sherriff of viewing source.
+
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>A Billion Bits</title>
+  <meta name="description" content="Comedy and more in New York and beyond. Produced by Reed Kavner.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- icon garbage -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="manifest" href="icons/site.webmanifest">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#1a237e">
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ff0000">
+  <meta name="msapplication-config" content="icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!-- FB OG garbage -->
+  <meta property="og:title" content="A Billion Bits>
+  <meta property="og:description" content="Comedy and more in Brooklyn and beyond. Produced by Reed Kavner.">
+  <meta property="og:url" content="https://www.abillionbits.com">
+  <meta property="og:image" content="https://www.abillionbits.com/img/abb-social.jpg">
+  <!-- twitter garbage -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@reedkavner" />
+  <meta name="twitter:creator" content="@reedkavner" />
+  <meta property="og:url" content="https://www.abillionbits.com" />
+  <meta property="og:title" content="A Billion Bits" />
+  <meta property="og:description" content="Comedy and more in Brooklyn and beyond. Produced by Reed Kavner." />
+  <meta property="og:image" content="https://www.abillionbits.com/img/abb-social.jpg" />
+  <!-- styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  
+
+  <!-- google anal-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-7853409-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+</head>
+<body>
+  <div id="main">
+    <img id="logo" src="img/abb-logo-transparent.png">
+    <section id="upcoming-shows">
+      <h2>Upcoming Shows</h2>
+      <div id="all-shows">
+      </div>
+
+      <script id="template-show-item" type="text/x-handlebars-template">
+        {{#each events}}
+        <div class="show">
+          <div class="show-date desktop-only">{{date}}</div>
+          <div class="show-name"><span class="date-mob mobile-only">{{date}}</span><br class="mobile-only">{{{name}}} <br class="mobile-only"><span class="show-venue">at {{venue}}</span></div>
+          <div class="show-button-container">
+            {{#if linkurl}}
+            <a class="show-button" href="{{linkurl}}">{{linktext}}</a>
+            {{else}}
+            <span class="show-nolink">{{linktext}}</span>
+            {{/if}}
+          </div>
+        </div>
+        {{/each}}
+      </script>
+
+
+      <div class="schedule-loading schedule-msg">
+        Finding shows...
+        <div class="lds-ripple"><div></div><div></div></div>
+      </div>
+      <div class="schedule-error schedule-msg" style="display:none;">
+        Something went wrong. This is very embarassing. <br>Please contact <strong>abillbits@gmail.com</strong> for information about upcoming shows.
+      </div>
+      <div class="schedule-empty schedule-msg" style="display: none;">
+        There are no shows scheduled right now. <br>Follow <a href="https://www.twitter.com/reedkavner">@reedkavner</a> for updates.
+      </div>
+
+    </section>
+  </div>
+  <div class="push"></div>
+  <footer>
+  Comedy and more in Brooklyn and beyond. Produced by <a href="https://reed.me">Reed Kavner</a>.
+  </footer>
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+  <script src="js/main.js"></script>
+<script src="js/title-updater.js"></script>
+
+</html>
