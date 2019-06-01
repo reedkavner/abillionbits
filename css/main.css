@@ -95,7 +95,6 @@ a:hover{
     color: #2bbc7d;
     font-size: 1em;
     font-weight: normal;
-    line-height: .5;
 }
 
 #bits{
@@ -103,7 +102,7 @@ a:hover{
     font-size: 2em;
     font-weight: bold;
     text-transform: uppercase;
-    line-height: 1;
+    line-height: .7;
 }
 
 #about{
@@ -124,8 +123,8 @@ a:hover{
         font-size: 16px;
     }
 
-    #main {
-
+    #abb {
+        font-size: 3em;
     }
 
     .desktop-only{
