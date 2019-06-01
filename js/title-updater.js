@@ -1,20 +1,20 @@
+import { CountUp } from './vendor/CountUp.min.js';
 
-$(document).ready(function(){
+window.onload = function() {
+	var howMany = $('#how-many');
+    const options = {
+        startVal: 0,
+        duration: 3
+    };
+    let count = new CountUp('how-many', 999999999, options);
+    if (!count.error) {
+        count.start(titleText);
+    } else {
+    	howMany.text('A Billion');
+        console.error(count.error);
+    }
 
-	function numberWithCommas(x) {
-    	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	}
-
-    var n = 0;
-	var updater = setInterval(function(){ 
-	if (n < 1000000000){
-		document.title = numberWithCommas(n) + " Bits";
-		n = n + Math.floor(Math.random() * 999999);
-	}else{
-		document.title = "A Billion Bits";
-		clearInterval(updater);
-	}
-	
-	}, 1);
-
-});
+    function titleText(){
+    	setTimeout(function(){ howMany.text('A Billion'); }, 100);
+    }
+}
