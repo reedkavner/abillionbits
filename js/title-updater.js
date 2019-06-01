@@ -1,4 +1,4 @@
-import { CountUp } from './vendor/CountUp.min.js';
+import { CountUp } from './vendor/countUp.min.js';
 
 window.onload = function() {
 	var howMany = $('#how-many');
